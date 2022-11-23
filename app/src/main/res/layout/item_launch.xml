@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/card_launch"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="16dp"
+	app:cardBackgroundColor="@color/white"
+	app:cardCornerRadius="10dp"
+	app:cardElevation="6dp">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="12dp">
+
+		<ImageView
+			android:id="@+id/img_launch_item"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:background="@color/black" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_mission_desc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="18dp"
+			android:text="@string/mission"
+			android:textSize="16sp"
+			app:layout_constraintStart_toEndOf="@id/img_launch_item"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			app:autoSizeTextType="uniform"
+			android:id="@+id/lbl_launch_item_mission"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toStartOf="@id/img_launch_item_mission_result"
+			app:layout_constraintBottom_toBottomOf="@id/lbl_launch_item_mission_desc"
+			app:layout_constraintStart_toEndOf="@id/lbl_launch_item_mission_desc"
+			tools:text="The Final Frontier" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_date_desc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/date"
+			android:textSize="16sp"
+			app:layout_constraintStart_toStartOf="@id/lbl_launch_item_mission_desc"
+			app:layout_constraintTop_toBottomOf="@id/lbl_launch_item_mission_desc" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:textSize="16sp"
+			app:layout_constraintStart_toEndOf="@id/lbl_launch_item_date_desc"
+			app:layout_constraintTop_toTopOf="@id/lbl_launch_item_date_desc"
+			tools:text="11/11/2011 11:11:11" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_rocket_desc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/rocket"
+			android:textSize="16sp"
+			app:layout_constraintStart_toStartOf="@id/lbl_launch_item_mission_desc"
+			app:layout_constraintTop_toBottomOf="@id/lbl_launch_item_date_desc" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_rocket"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:textSize="16sp"
+			app:layout_constraintStart_toEndOf="@id/lbl_launch_item_rocket_desc"
+			app:layout_constraintTop_toTopOf="@id/lbl_launch_item_rocket_desc"
+			tools:text="Falcon 9000" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_time_desc"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/time"
+			android:textSize="16sp"
+			app:layout_constraintStart_toStartOf="@id/lbl_launch_item_mission_desc"
+			app:layout_constraintTop_toBottomOf="@id/lbl_launch_item_rocket_desc" />
+
+		<TextView
+			android:id="@+id/lbl_launch_item_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="8dp"
+			android:textSize="16sp"
+			app:layout_constraintStart_toEndOf="@id/lbl_launch_item_time_desc"
+			app:layout_constraintTop_toTopOf="@id/lbl_launch_item_time_desc"
+			tools:text="1111 days ago" />
+
+		<ImageView
+			android:id="@+id/img_launch_item_mission_result"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:src="@drawable/ic_check" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/lbl_company"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/black"
+		android:padding="8dp"
+		android:text="@string/company"
+		android:textColor="@color/white"
+		android:textSize="24sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/lbl_company_desc"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginHorizontal="8dp"
+		android:layout_marginTop="8dp"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toTopOf="@id/lbl_launches"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lbl_company"
+		tools:text="@string/company_desc" />
+
+	<TextView
+		android:id="@+id/lbl_launches"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:background="@color/black"
+		android:padding="8dp"
+		android:text="@string/launches"
+		android:textColor="@color/white"
+		android:textSize="24sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lbl_company_desc" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/launches_list"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:fadingEdgeLength="25dp"
+		android:requiresFadingEdge="vertical"
+		app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/lbl_launches"
+		tools:listitem="@layout/item_launch" />
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		tools:visibility="visible"
+		android:visibility="gone"
+		android:id="@+id/launches_scroll_top"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/ic_scroll_top"
+		app:layout_constraintBottom_toTopOf="@id/launches_asc_fab"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		tools:visibility="visible"
+		android:visibility="gone"
+		android:id="@+id/launches_asc_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/ic_up_arrow"
+		app:layout_constraintBottom_toTopOf="@id/launches_desc_fab"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		tools:visibility="visible"
+		android:visibility="gone"
+		android:id="@+id/launches_desc_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="16dp"
+		android:src="@drawable/ic_down_arrow"
+		app:layout_constraintBottom_toTopOf="@id/launches_master_fab"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+		android:text="@string/actions"
+		android:id="@+id/launches_master_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="16dp"
+		app:icon="@drawable/ic_add"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent" />
+
+	<WebView
+		android:id="@+id/launches_web_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

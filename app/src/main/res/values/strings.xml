@@ -1,0 +1,14 @@
+<resources>
+	<string name="app_name">Rocket Science</string>
+
+	<string name="mission">Mission:</string>
+	<string name="date">Date:</string>
+	<string name="rocket">Rocket:</string>
+	<string name="time">Time:</string>
+	<string name="company">Company</string>
+	<string name="launches">Launches</string>
+	<string name="company_desc">%s was founded by %s in %d. It now has %d employees, %d launch sites, and is valued at USD %s.</string>
+	<string name="open">Open</string>
+	<string name="generic_error">Something went wrong!</string>
+	<string name="actions">Actions</string>
+</resources>
